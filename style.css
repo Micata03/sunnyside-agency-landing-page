@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+:root{
+    /*Primary*/
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    /*Neutral*/
+    --very-dark-desaturate-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --very-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+html{
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+/*Hero Mobile*/
+.hero{
+    min-height: 100vh;
+    background-image: url('images/mobile/image-header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content > h1{
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50%;
+    letter-spacing: 3px;
+}
+.hero-content > svg{
+    position: relative;
+    top: 81px;
+    left: 170px;
+}
+
+/*HERO DESKTOP*/
+
+@media screen and (min-width: 1040px){
+    .hero{
+        background-image: url('images/desktop/image-header.jpg');
+    }
+    .hero-content > h1{
+        padding-top: 8%;
+    }
+    .hero-content > svg {
+        top: 7rem;
+        left: 41rem;
+    }
+}
+
+/*EGG */
+
+.egg{
+    height: 100vh;
+}
+ .egg-image{
+     height: 50vh;
+     background-image: url('images/mobile/image-transform.jpg');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+ }
+
+ .egg-text > h2{
+    font-family: 'Fraunces', serif;
+    color: var(--very-dark-desaturate-blue);
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+
+ }
+ .egg-text > p{
+    font-family: 'Fraunces', serif;
+    color: var(--very-grayish-blue);
+    text-align: center;
+    line-height: 2;
+ }
+ .egg-text > a{
+    font-family: 'Fraunces', serif;
+     text-transform: uppercase;
+     color: var(--very-dark-desaturate-blue);
+     letter-spacing: 2px;
+     text-decoration-color:  var(--yellow) ;
+     padding-left: 30%;
+
+ }
+/*egg desktop*/
+
+@media screen and (min-width: 1040px){
+    .egg{
+        height: 50vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr );
+    }
+}
